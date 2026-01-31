@@ -42,7 +42,7 @@ async def home_state(message):
 
 @bot.on_message(at_state('NAME'))
 async def name_state(message):
-    msg = [{'role': 'user', "id": "pmpt_abc123test",'content': '{}'.format(message.text)},]
+    msg = [{'role': 'user','content': '{}'.format(message.text)},]
     name = gpt_35_api(msg)
     await message.reply(name)
     message.author.set_state('NAME')
