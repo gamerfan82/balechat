@@ -56,4 +56,4 @@ async def age_state(message):
     )
     message.author.del_state()
 
-bot.run()
+bot.run(debug=True, port=8050, host='0.0.0.0')
